@@ -9,6 +9,10 @@ class Game
     def play
       puts''
       puts "New game has been started!\r"
+      puts''
+      puts "Type 'save' to save the game."
+      puts "Type 'load' to load the game."
+      puts''
       
       pick_a_word
       @guesses_left = @secret_word.length + 1
@@ -42,6 +46,7 @@ class Game
     end
 
     private 
+
     def pick_a_word
       @@dictionary.each do |l|
         until (l.slice! "\n") == nil && (l.slice! "\r") == nil
